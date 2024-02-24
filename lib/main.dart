@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_task/ui/Hash_map.dart';
 import 'package:flutter_task/ui/List_handling.dart';
 import 'package:flutter_task/ui/String_manipulation.dart';
+
 import '../Constant.dart';
 
 void main() {
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: HomeScreen(),
     );
   }
@@ -44,8 +46,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
-
-
-
-

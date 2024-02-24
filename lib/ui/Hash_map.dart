@@ -32,7 +32,9 @@ class _HashMapTabState extends State<HashMapTab> {
               Expanded(
                 child: TextField(
                   controller: _nameController,
+                  obscureText: true,
                   decoration: const InputDecoration(
+                      border: OutlineInputBorder(),
                       labelText: Constants.hashmap_name_txt),
                 ),
               ),
@@ -41,7 +43,9 @@ class _HashMapTabState extends State<HashMapTab> {
                 child: TextField(
                   controller: _ageController,
                   keyboardType: TextInputType.number,
+                  obscureText: true,
                   decoration: const InputDecoration(
+                      border: OutlineInputBorder(),
                       labelText: Constants.hashmap_age_txt),
                 ),
               ),
@@ -128,14 +132,19 @@ class _HashMapTabState extends State<HashMapTab> {
                   TextField(
                     controller: nameController,
                     decoration: InputDecoration(
+                        border: OutlineInputBorder(),
                         labelText: 'Name',
                         errorText:
                             _validateName ? 'Name cannot be empty' : null),
+                  ),
+                  SizedBox(
+                    height: 10,
                   ),
                   TextField(
                     controller: ageController,
                     keyboardType: TextInputType.number,
                     decoration: InputDecoration(
+                        border: OutlineInputBorder(),
                         labelText: 'Age',
                         errorText: _validateAge ? 'Age cannot be empty' : null),
                   ),

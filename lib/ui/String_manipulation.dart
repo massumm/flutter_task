@@ -21,6 +21,7 @@ class _StringManipulationTabState extends State<StringManipulationTab> {
           TextField(
             controller: _inputController,
             decoration: const InputDecoration(
+                border: OutlineInputBorder(),
                 labelText: Constants.manipulatedString_enter_string),
           ),
           const SizedBox(height: 20),

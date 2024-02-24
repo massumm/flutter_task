@@ -47,15 +47,20 @@ class _List_handling_TabState extends State<List_handling_Tab> {
     return Scaffold(
       body: Column(
         children: [
-          TextField(
-            decoration: const InputDecoration(
-                labelText: Constants.list_handling_inpt_txt),
-            onChanged: (value) {
-              userInput = value;
-            },
-            onSubmitted: (_) {
-              addItem();
-            },
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextField(
+              obscureText: true,
+              decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: Constants.list_handling_inpt_txt),
+              onChanged: (value) {
+                userInput = value;
+              },
+              onSubmitted: (_) {
+                addItem();
+              },
+            ),
           ),
           ElevatedButton(
             onPressed: addItem,
